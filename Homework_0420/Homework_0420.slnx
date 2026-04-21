@@ -1,4 +1,8 @@
 <Solution>
+  <Project Path="LeapYear/LeapYear.csproj" Id="d86c6308-0f12-4491-ae1e-48df56ab54ac" />
+  <Project Path="LoopReversal1/LoopReversal1.csproj" Id="9db8215a-f189-4365-8cf6-66d75cfc2fea" />
+  <Project Path="LoopReversal2/LoopReversal2.csproj" Id="c9b4c900-af15-4670-8103-de21d1512bf3" />
   <Project Path="OddAndEven1/OddAndEven1.csproj" />
   <Project Path="OddAndEven2/OddAndEven2.csproj" />
+  <Project Path="WeekendCounter1/WeekendCounter1.csproj" Id="526f9019-86f5-4d05-9eec-ead0959ab569" />
 </Solution>
