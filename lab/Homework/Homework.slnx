@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Day2/Day2WordsCount.csproj" />
+  <Project Path="Day2CountNumbers/Day2CalcNum.csproj" />
+  <Project Path="Day2SortNum/Day2SortNum.csproj" />
+  <Project Path="FindNumber/Day2JudgeNumber.csproj" />
+</Solution>

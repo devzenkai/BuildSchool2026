@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ConditionDisplay/ConditionDisplay.csproj" Id="007e5f1d-2107-47cb-a7e2-fabd6a8491d3" />
+  <Project Path="MyFirstApp/MyFirstApp.csproj" />
+  <Project Path="ReadThenDisplay/ReadThenDisplay.csproj" />
+  <Project Path="SwitchDisplay/SwitchDisplay.csproj" Id="31883dcf-3a64-4718-9426-6098881572f6" />
+</Solution>
