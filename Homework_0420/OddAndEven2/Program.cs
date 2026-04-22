@@ -7,26 +7,43 @@ namespace OddAndEven2
         static void Main(string[] args)
         {
             string input = Console.ReadLine(); //user input
-            string[] parts = input.Split(","); //split input by using comma
+            string[] numbers = input.Split(","); //split input by using comma
 
-            int[] odd = new int[parts.Length];
-            int[] even = new int[parts.Length];
+            //判斷奇偶數後加入其對應的陣列
             int oddCount = 0, evenCount = 0;
-
-            for (int i = 0; i < parts.Length; i++)
+            for (int i = 0; i < numbers.Length; i++)
             {
-                int n = int.Parse(parts[i]);
+                int n = int.Parse(numbers[i]);
                 if (n % 2 == 0)
                 {
-                    even[evenCount++] = n;
+                    evenCount++;
                 }
                 else
                 {
-                    odd[oddCount++] = n;
+                    oddCount++;
                 }
             }
-            Console.WriteLine($"Odd numbers: {odd}");
-            Console.WriteLine($"Even numbers: {even}");
+
+            //新增空的奇數和偶數的陣列
+            int[] oddArray = new int[oddCount];
+            int[] evenArray = new int[evenCount];
+            int odd = 0, even = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                int n = int.Parse(numbers[i]);
+                if (n % 2 == 0)
+                {
+                    evenArray[even++] = n;
+                }
+                else
+                {
+                    oddArray[odd++] = n;
+                }
+            }
+            Array.Sort(oddArray);
+            Array.Sort(evenArray);
+            Console.WriteLine($"Odd numbers: {string.Join(",",oddArray)}");
+            Console.WriteLine($"Even numbers: {string.Join(",", evenArray)}");
         }
     }
 }
