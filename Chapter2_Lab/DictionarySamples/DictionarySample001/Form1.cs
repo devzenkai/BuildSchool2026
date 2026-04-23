@@ -25,6 +25,7 @@ namespace DictionarySample001
         private void button1_Click(object sender, EventArgs e)
         {
             string key = textBox1.Text;
+            /*
             if (_dictionary.ContainsKey(key))
             {
                 int area = _dictionary[key].GetArea();
@@ -34,6 +35,17 @@ namespace DictionarySample001
             {
                 MessageBox.Show("查無資料");
             }
+            */
+            if (_dictionary.TryGetValue(key, out MyRectangle rect)) //優先選擇TryGetValue方法
+            {
+                int area = rect.GetArea();
+                MessageBox.Show($"{key} 的面積為： {area}");
+            }
+            else
+            {
+                MessageBox.Show("查無資料");
+            }
+
         }
     }
 }
