@@ -30,7 +30,7 @@ namespace WeekendCounter1
         */
 
         /* Homework_07
-                 private void CalculateWeekend()
+        private void CalculateWeekend()
         {
             int year = int.Parse(userInput.Text);
             int satCount = 52, sunCount = 52;
@@ -67,7 +67,7 @@ namespace WeekendCounter1
             }
             label1.Text = $"Saturday: {satCount} days, Sunday: {sunCount} days";
         }
-         */
+        */
 
         // Homework_08
         private void CalculateWeekend()
