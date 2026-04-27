@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="LinqSample001/LinqSample001.csproj" />
+  <Project Path="LinqSample002/LinqSample002.csproj" />
+  <Project Path="LinqSample003/LinqSample003.csproj" />
+  <Project Path="LinqSample010/LinqSample010.csproj" />
+  <Project Path="LinqSample013/LinqSample013.csproj" />
+</Solution>
