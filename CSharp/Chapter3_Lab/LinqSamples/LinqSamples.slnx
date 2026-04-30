@@ -4,4 +4,6 @@
   <Project Path="LinqSample003/LinqSample003.csproj" />
   <Project Path="LinqSample010/LinqSample010.csproj" />
   <Project Path="LinqSample013/LinqSample013.csproj" />
+  <Project Path="LinqSample015/LinqSample015.csproj" Id="5f2d01ed-b3a2-45fe-b0de-9327ab630d49" />
+  <Project Path="LinqSample016/LinqSample016.csproj" Id="bb0eca4a-f047-4612-a0ba-94c0891ca4be" />
 </Solution>

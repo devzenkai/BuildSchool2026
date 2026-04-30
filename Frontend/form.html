@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/my-post-form" method="post">
+      <div>
+        <label for="account">Username: </label>
+        <input
+          type="text"
+          id="account"
+          name="account-name"
+          placeholder="please enter your username"
+        />
+      </div>
+      <div>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" />
+      </div>
+      <div>
+        <label for="password">Password: </label>
+        <input
+          type="password"
+          id="password"
+          name="password-name"
+          minlength="6"
+        />
+      </div>
+      <div>
+        <label for="age">Age: </label>
+        <input type="number" id="age" name="age" value="20" max="75" />
+      </div>
+      <div>
+        <label for="birthday">Birthday: </label>
+        <input type="date" id="birthday" name="birthday" />
+      </div>
+      <div>
+        <label for="tel">Tel: </label>
+        <input type="tel" id="tel" name="tel" maxlength="10" />
+      </div>
+      <div>
+        <label for="gender">Gender: </label>
+
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+      </div>
+      <div>
+        <label for="city">City: </label>
+        <select name="city" id="city">
+          <option value="">Please choose an option.</option>
+          <option value="taipei">Taipei</option>
+          <option value="taichung">Taichung</option>
+          <option value="kaohsiung">Kaohsiung</option>
+        </select>
+      </div>
+      <div>
+        <label for="hobbies">Hobbies</label>
+        <input type="checkbox" id="coding" name="hobbies" value="coding" />
+        <label for="coding">coding</label>
+        <input type="checkbox" id="reading" name="hobbies" value="reading" />
+        <label for="reading">reading</label>
+        <input type="checkbox" id="other" name="hobbies" value="other" />
+        <label for="other">other:</label>
+      </div>
+      <div>
+        <label for="file">File: </label>
+        <input type="file" id="file" name="file" />
+      </div>
+
+      <div>
+        <label for="comment">Comment: </label>
+        <input type="textarea" id="comment" />
+      </div>
+
+      <div>
+        <label for="agree">I agree. </label>
+        <input type="checkbox" id="agree" name="agree" required />
+      </div>
+
+      <div>
+        <input type="submit" name="" id="" value="submit" />
+        <input type="reset" name="" id="" value="reset" />
+      </div>
+    </form>
+  </body>
+</html>
