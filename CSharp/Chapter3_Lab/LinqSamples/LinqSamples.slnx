@@ -6,4 +6,8 @@
   <Project Path="LinqSample013/LinqSample013.csproj" />
   <Project Path="LinqSample015/LinqSample015.csproj" Id="5f2d01ed-b3a2-45fe-b0de-9327ab630d49" />
   <Project Path="LinqSample016/LinqSample016.csproj" Id="bb0eca4a-f047-4612-a0ba-94c0891ca4be" />
+  <Project Path="LinqSample017/LinqSample017.csproj" Id="08e2f6c2-ad79-42af-b8e5-723aa82da0d5" />
+  <Project Path="LinqSample018/LinqSample018.csproj" Id="4bbeb437-1f0b-42e4-a5fe-52104538ccd1" />
+  <Project Path="LinqSample020/LinqSample020.csproj" Id="6ec81acf-5368-4d99-a673-e5b56707a198" />
+  <Project Path="LinqSample021/LinqSample021.csproj" Id="9b6f2b45-d4f7-4709-ac1d-cfeca14c64ab" />
 </Solution>
