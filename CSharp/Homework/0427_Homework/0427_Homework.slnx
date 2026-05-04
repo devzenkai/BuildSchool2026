@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="OddAndEven/OddAndEven.csproj" Id="1bbf95ee-761c-40e2-ba90-704c13318b99" />
+  <Project Path="SequenceReversal1/SequenceReversal1.csproj" Id="58a6d61e-23df-487e-be15-296c4a31f98b" />
+  <Project Path="SequenceReversal2/SequenceReversal2.csproj" Id="c03d9fdd-28b9-45bb-8394-376d424cb3f5" />
   <Project Path="WinFormsApp1/WinFormsApp1.csproj" Id="e0a34e45-5cc8-48c8-aad2-2febf22a9a07" />
 </Solution>

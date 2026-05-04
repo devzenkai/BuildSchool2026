@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>偽類選擇器</title>
+    <style>
+      a {
+        color: black;
+      }
+      /* 偽類選擇器 */
+      a:link {
+        color: green;
+      }
+      a:visited {
+        color: purple;
+      }
+      a:hover {
+        color: red;
+      }
+      a:active {
+        color: orange;
+      }
+      ul:first-of-type li:first-child {
+        color: red;
+      }
+      ul:first-child li:first-child {
+        color: red;
+      }
+      li:last-child {
+        color: blue;
+      }
+      li:nth-child(3) {
+        color: green;
+      }
+      li:nth-child(2n) {
+        color: aquamarine;
+      }
+      ul:nth-of-type(1) li:nth-child(5) {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://google.com/">Google</a>
+
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+  </body>
+</html>
