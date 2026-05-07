@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var x;
+      // console.log(x);
+      // x = 10;
+
+      // console.log(y);
+      // let y = 10;
+
+      //   var aa;
+      //   aa = 100;
+
+      //   var aa = 10000;
+      //   console.log(aa);
+
+      //   var bb;
+      //   bb = 100;
+      //   {
+      //     // var bb = 1000;
+      //     console.log(bb);
+      //   }
+      //   console.log(bb);
+
+    //   let bb = 100;
+    //   if (true) {
+    //     // console.log(bb); // ReferenceError: TDz
+    //     let bb = 1000;
+    //     console.log(bb);
+    //   }
+    //   console.log(bb);
+
+    // foo();
+    // function foo(){
+    //     console.log("this is foo.");
+    // }
+
+    const title = 'outer';
+
+    function showTitle(){
+        const title = 'inner';
+
+        if (true){
+            let title = 'block';
+            console.log(title);
+        }
+        console.log(title);        
+    }
+
+    showTitle();
+    console.log(title);
+    
+
+    </script>
+  </body>
+</html>

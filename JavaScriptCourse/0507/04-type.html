@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let x = 10;
+      console.log(typeof x);
+      x = "Hello";
+      console.log(typeof x);
+
+      const foo = 42;
+      const result = foo + " is the answer";
+      console.log(result);
+
+      const obj = { name: "Andy" };
+      obj.name = "Andy Huang";
+      console.log(obj);
+      //   obj = "andy"
+
+      console.log(obj.Name);
+      console.log(obj["age"]);
+      const propName = "age";
+      console.log(obj[propName]);
+
+      const arr = [1, 2, 3, "Hi"];
+      console.log(arr);
+      console.log(arr[3]);
+      console.log(arr[100]);
+
+      const name = "Amy";
+      const score = 90;
+      const res = `${name} 的分數為：${score}`;
+      console.log(res);
+    </script>
+  </body>
+</html>

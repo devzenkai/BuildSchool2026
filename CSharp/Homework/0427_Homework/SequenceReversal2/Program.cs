@@ -6,7 +6,10 @@
         {
             int n = int.Parse(Console.ReadLine());
 
-            var result = Enumerable.Range(1, n).Select(i => new string((n - i + 1).ToString()[0], i));
+            var result = Enumerable
+                .Range(0, n)
+                .Select(i => new string((n - i + 1)
+                .ToString()[0], i + 1));
 
             foreach(var line in result)
             {

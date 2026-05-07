@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      try {
+        console.log(x);
+        let x = 10;
+      } catch (err) {
+        console.log(err);
+      } finally {
+        console.log("這是finally區塊");
+      }
+
+      console.log("這是結尾的地方");
+      
+    </script>
+  </body>
+</html>

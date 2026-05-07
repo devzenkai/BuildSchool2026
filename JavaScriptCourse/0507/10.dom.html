@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>猜數字遊戲</h1>
+    <p>請輸入1~100之間的數字：</p>
+    <input type="text" id="num-input" value="" />
+    <button class="btn">看結果</button>
+    <div class="result-area"></div>
+    <script>
+      const myInput = document.querySelector("#num-input");
+      const myBtn = document.querySelector(".btn");
+      const resultArea = document.querySelector(".result-area");
+      console.log(myInput);
+      console.dir(myBtn);
+
+      myBtn.addEventListener("click", function () {
+        // console.log("你點了Btn");
+        console.log(`input的值：${myInput.value}`);
+        resultArea.textContent = myInput.value;
+        myInput.value = "";
+      });
+    </script>
+  </body>
+</html>

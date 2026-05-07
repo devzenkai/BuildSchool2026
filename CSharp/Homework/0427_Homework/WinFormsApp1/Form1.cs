@@ -38,9 +38,10 @@ namespace WinFormsApp1
             ChangeData();
         }
 
-        private bool IsWin()
+        private void IsWin()
         {
-            return _leftlist.Count == 0;
+            if (_leftlist.Count == 0) 
+                MessageBox.Show("Success!");
         }
 
         private bool IsDangerous(List<string> side)
@@ -95,10 +96,7 @@ namespace WinFormsApp1
                 MessageBox.Show("Game failed.");
                 return;
             }
-            if (IsWin())
-            {
-                MessageBox.Show("Success!");
-            }
+            IsWin();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -113,10 +111,7 @@ namespace WinFormsApp1
                 MessageBox.Show("Game failed.");
                 return;
             }
-            if (IsWin())
-            {
-                MessageBox.Show("Success!");
-            }
+            IsWin();
         }
 
         private void button3_Click(object sender, EventArgs e)
