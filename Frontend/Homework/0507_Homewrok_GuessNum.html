@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+</head>
+
+<body>
+
+    <h1>Guess My Number</h1>
+    <p id="rangeDisplay">範圍：1~100</p>
+
+    <input type="number" id="guessInput" min="1" max="100" placeholder="請輸入數字...">
+    <button id="guessBtn">submit</button>
+
+    <p id="message">請在 1～100 之間猜一個數字</p>
+    <p id="countDisplay">猜測次數：0</p>
+    <ul id="history"></ul>
+    <button id="restartBtn">reset</button>
+
+    <script>
+        const guessInput = document.querySelector("#guessInput")
+        const guessBtn = document.querySelector("#guessBtn")
+        const restartBtn = document.querySelector("#restartBtn")
+        const message = document.querySelector("#message")
+
+        let answer = Math.floor(Math.random() * 100) + 1;
+        let minNum = 1;
+        let maxNum = 100;
+        let count = 0;
+
+        guessBtn.addEventListener("click", function () {
+            let guess = Number(guessInput.value);
+
+            if (guessInput.value === "" || !Number.isInteger(guess)) {
+                message.textContent = "請輸入整數"
+            }
+            if (guess < minNum || guess > maxNum) {
+                message.textContent = `請猜 ${minNum}~${maxNum} 之間的整數`
+                return;
+            }
+            count++;
+            countDisplay.textContent = `猜測次數：${count}`;
+
+            // 判斷大小
+            if (guess > answer) {
+                maxNum = guess - 1;
+                guessInput.max = maxNum;
+                message.textContent = `${guess}太大了！請猜 ${minNum}~${maxNum} 之間的數字`
+            } else if (guess < answer) {
+                minNum = guess + 1;
+                guessInput.min = minNum;
+                message.textContent = `${guess}太小了！請猜${minNum}~${maxNum} 之間的數字`
+            } else {
+                message.textContent = `${guess} 答對了！`
+            }
+
+            // 重置
+            restartBtn.addEventListener("click", function () {
+                answer = Math.floor(Math.random() * 100) + 1;
+                minNum = 1;
+                maxNum = 100;
+                count = 0;
+                guessInput.min = 1;
+                guessInput.max = 100;
+                guessInput.value = "";
+                message.textContent = "請在 1～100 之間猜一個數字";
+                countDisplay.textContent = "猜測次數：0";
+            })
+
+        })
+
+    </script>
+
+</body>
+
+</html>
