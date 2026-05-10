@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-container {
+        display: flex;
+        width: 500px;
+        height: 500px;
+        border: 1px solid red;
+
+        /* flex-direction: row; */
+        /* flex-wrap: wrap; */
+
+        flex-flow: row wrap;
+
+        /* justify-content: flex-start; */
+        /* justify-content: flex-end; */
+        /* justify-content: center; */
+        /* justify-content: space-between; */
+        /* justify-content: space-around; */
+
+        /* align-items: stretch; */
+        /* align-items: center; */
+        /* align-items: flex-end; */
+        /* align-items: flex-start; */
+
+        /* align-content: center; */
+        /* align-content: flex-end; */
+        /* align-content: flex-start; */
+
+        /* gap: 10px; */
+        /* row-gap: 10px; */
+        /* column-gap: 10px; */
+      }
+      .flex-item {
+        width: 100px;
+        /* height: 100px; */
+        box-sizing: border-box;
+        border: 1px solid blue;
+        background-color: #faa;
+        color: #000;
+
+        align-self: auto;
+      }
+
+      .special-item {
+        background-color: #fa0;
+        align-self: flex-end;
+        order: 0;
+      }
+      .item-1 {
+        flex-grow: 1;
+      }
+      .item-2 {
+        flex-grow: 2;
+      }
+      .item-3 {
+        flex-grow: 3;
+      }
+      .wrap {
+        margin-top: 50px;
+        width: 500px;
+        height: 300px;
+        border: 1px solid red;
+        display: flex;
+      }
+      .wrap .item {
+        width: 200px;
+        background-color: #fa0;
+        border: 1px solid red;
+        flex-shrink: 1;
+        flex-basis: auto;
+        flex-basis: 100px;
+      }
+      .wrap .item:nth-child(1) {
+        flex-shrink: 0;
+      }
+      .wrap .item:nth-child(3) {
+        flex-shrink: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">
+        1 <br />
+        1 <br />
+        1
+      </div>
+      <div class="flex-item">2</div>
+      <div class="flex-item special-item">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+      <div class="flex-item item-1">6</div>
+      <div class="flex-item item-2">7</div>
+      <div class="flex-item item-3">8</div>
+    </div>
+
+    <div class="wrap">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </div>
+  </body>
+</html>

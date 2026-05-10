@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #fa0;
+        border: 2px solid red;
+        display: inline-block;
+
+        position: static;
+      }
+
+      .box:nth-child(3) {
+        position: relative;
+        top: 20px;
+        left: 20px;
+      }
+      .parent {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border: 1px solid blue;
+      }
+      .child {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        background-color: blue;
+      }
+      .box:nth-child(10) {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+      }
+      .box:nth-child(8) {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+      }
+      .section {
+        height: 100vh;
+        position: relative;
+        background-color: #aaa;
+      }
+      .section:nth-child(even) {
+        background-color: #333;
+      }
+      .sticky {
+        width: 100px;
+        height: 100px;
+        position: sticky;
+        top: 20px;
+        background-color: #fa0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">
+      10
+      <div class="child"></div>
+    </div>
+    <div class="box">11</div>
+    <div class="box">12</div>
+    <div class="box">13</div>
+    <div class="box">14</div>
+    <div class="box">15</div>
+    <div class="box">16</div>
+    <div class="box">17</div>
+    <div class="box">18</div>
+    <div class="box">19</div>
+    <div class="box">20</div>
+
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+      blanditiis ut sequi modi earum illum voluptatem dolores vel excepturi,
+      necessitatibus placeat, doloribus odit, ad fugit illo nostrum. Laborum,
+      possimus vel?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+      blanditiis ut sequi modi earum illum voluptatem dolores vel excepturi,
+      necessitatibus placeat, doloribus odit, ad fugit illo nostrum. Laborum,
+      possimus vel?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+      blanditiis ut sequi modi earum illum voluptatem dolores vel excepturi,
+      necessitatibus placeat, doloribus odit, ad fugit illo nostrum. Laborum,
+      possimus vel?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+      blanditiis ut sequi modi earum illum voluptatem dolores vel excepturi,
+      necessitatibus placeat, doloribus odit, ad fugit illo nostrum. Laborum,
+      possimus vel?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+      blanditiis ut sequi modi earum illum voluptatem dolores vel excepturi,
+      necessitatibus placeat, doloribus odit, ad fugit illo nostrum. Laborum,
+      possimus vel?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+      blanditiis ut sequi modi earum illum voluptatem dolores vel excepturi,
+      necessitatibus placeat, doloribus odit, ad fugit illo nostrum. Laborum,
+      possimus vel?
+    </p>
+    <div class="container">
+      <div class="section">
+        <div class="sticky">1</div>
+      </div>
+      <div class="section">
+        <div class="sticky">2</div>
+      </div>
+      <div class="section">
+        <div class="sticky">3</div>
+      </div>
+    </div>
+  </body>
+</html>

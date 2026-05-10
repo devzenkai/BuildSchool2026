@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box1,
+      .box2,
+      .box3 {
+        width: 400px;
+        height: 200px;
+        background-color: #fa0;
+        border: 2px solid red;
+        box-sizing: border-box;
+        margin: 30px auto;
+
+        display: flex;
+        align-items: center;
+      }
+
+      .box1 {
+        margin-top: 30px;
+      }
+      .box2 {
+        margin-top: 30px;
+      }
+      .box3 {
+        margin-top: 30px;
+      }
+      .img-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .img-box img {
+        object-fit: cover;
+      }
+      .img-box,
+      .text-box {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="img-box">
+        <img src="https://picsum.photos/150" alt="" />
+      </div>
+      <div class="text-box">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo omnis
+          temporibus voluptatem error in labore eum commodi tempore delectus
+          laborum distinctio asperiores exercitationem dolores culpa quisquam,
+          voluptas vero corrupti perspiciatis.
+        </p>
+      </div>
+    </div>
+
+    <div class="box2">
+      <div class="text-box">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo omnis
+          temporibus voluptatem error in labore eum commodi tempore delectus
+          laborum distinctio asperiores exercitationem dolores culpa quisquam,
+          voluptas vero corrupti perspiciatis.
+        </p>
+      </div>
+      <div class="img-box">
+        <img src="https://picsum.photos/150" alt="" />
+      </div>
+    </div>
+
+    <div class="box3">
+      <div class="img-box">
+        <img src="https://picsum.photos/150" alt="" />
+      </div>
+      <div class="text-box">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo omnis
+          temporibus voluptatem error in labore eum commodi tempore delectus
+          laborum distinctio asperiores exercitationem dolores culpa quisquam,
+          voluptas vero corrupti perspiciatis.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

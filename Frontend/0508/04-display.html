@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .block-element{
+            width: 200px;
+            height: 200px;
+            background-color: #fa0;
+            display: block;
+        }
+        .inline-element{
+            display: inline;
+            width: 200px;
+            height: 200px;
+            background-color: #fa0;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            margin-right: 50px;
+        }
+
+        .inline-block{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            background-color: #f0a;
+        }
+
+        .flex-box{
+            display: flex;
+            width: 600px;
+            background: #666;
+        }
+
+        .flex-item{
+            background-color: #fa0;
+            width: 300px;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        p{
+            font-size: 32px;
+        }
+        span{
+            font-size: 12px;
+            vertical-align: baseline;
+            vertical-align: top;
+            vertical-align: middle;
+            vertical-align: bottom;
+        }
+        img-container{
+            width: 300px;
+            border: 1px solid red;
+        }
+        img-container img{
+            width: 100%;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+    <div class="block-element">123</div>
+    <div class="inline-element">123</div>
+    <div class="inline-block">123</div>
+    <div class="inline-block">123</div>
+    <div class="inline-block">123</div>
+
+    <p>文字 <span>123</span> 文字</p>
+    <p>文字 <span>123</span> 文字</p>
+
+    <div class="img-container">
+        <img src="https://picsum.photos/600/600/?random=10" alt="">
+    </div>
+</body>
+</html>
