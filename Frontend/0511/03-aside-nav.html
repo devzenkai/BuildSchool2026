@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .sidebar-layout {
+        min-height: 100vh;
+        display: flex;
+      }
+      .sidebar {
+        background-color: #333;
+        /* width: 250px; */
+        /* flex-basis: 250px; */
+        flex: 0 0 250px;
+      }
+      .main-content {
+        background-color: #ccc;
+        /* flex-grow: 1; */
+        flex: 1;
+      }
+      .sidebar-right{
+        background-color: #fa0;
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar-layout">
+      <div class="sidebar"></div>
+      <div class="main-content">main content</div>
+      <div class="sidebar-right"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .nav {
+        color: white;
+        background-color: #2c3e50;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+      }
+      .logo {
+        font-size: 1.5em;
+      }
+      .nav-links {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        gap: 25px;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        padding: 8px 12px;
+      }
+      .nav-links a:hover{
+        background: rgba(255,255,255,0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">品牌 LOGO</div>
+      <div class="nav-links">
+        <li><a href="#">首頁</a></li>
+        <li><a href="#">關於</a></li>
+        <li><a href="#">服務</a></li>
+        <li><a href="#">聯絡</a></li>
+      </div>
+    </nav>
+  </body>
+</html>

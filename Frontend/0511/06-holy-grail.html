@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .holy-grail {
+      display: flex;
+      flex-direction: column;
+      min-height: 400px;
+    }
+
+    .header,
+    .footer {
+      background-color: #28a745;
+      color: white;
+      flex-shrink: 0;
+      flex-grow: 0;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .content-area {
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: flex;
+    }
+    .sidebar-left {
+      /* flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 200px; */
+      flex: 0 0 200px;
+      background-color: #d4edda;
+    }
+    .main-content{
+      padding: 15px;
+    }
+    .sidebar-right {
+      flex: 0 0 150px;
+            background-color: #d4edda;
+
+    }
+  </style>
+  <body>
+    <header class="header">網站頁首</header>
+
+    <div class="content-area">
+      <aside class="sidebar-left">
+        <strong>左側欄</strong>
+        <p>導航選單</p>
+      </aside>
+      <main class="main-content">
+        <strong>主要內容</strong>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          perferendis officia explicabo aliquam quaerat eligendi animi!
+          Recusandae adipisci voluptatibus officiis possimus eius dicta, iure
+          dolor odio laboriosam architecto libero. Pariatur?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          perferendis officia explicabo aliquam quaerat eligendi animi!
+          Recusandae adipisci voluptatibus officiis possimus eius dicta, iure
+          dolor odio laboriosam architecto libero. Pariatur?
+        </p>
+      </main>
+      <aside class="sidebar-right">
+        <strong>右側欄</strong>
+        <p>廣告區域</p>
+      </aside>
+    </div>
+
+    <footer class="footer">網站頁腳</footer>
+  </body>
+</html>
