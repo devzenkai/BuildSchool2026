@@ -8,15 +8,18 @@
       * {
         padding: 0;
         margin: 0;
+      }
+      .row > * {
         box-sizing: border-box;
       }
       .container {
         width: 100%;
+        margin: 0 auto;
       }
       .row {
         display: flex;
         flex-wrap: wrap;
-        /* gap: 10px; */
+        gap: 15px;
       }
       .col {
         width: 100%;
@@ -26,16 +29,22 @@
       }
 
       @media screen and (min-width: 768px) {
+        .container {
+          max-width: 720px;
+        }
         .col {
           width: 50%;
+          width: calc((100% - 15px) / 2);
         }
-        .main-omg {
+        .main-img {
           width: 100%;
+          order: -1;
         }
       }
       @media screen and (mid-width: 992px) {
         .col {
           width: 33.33%;
+          width: calc((100% - 30px) / 3);
         }
       }
     </style>
@@ -45,7 +54,7 @@
       <div class="row">
         <div class="col">A</div>
         <div class="col">B</div>
-        <div class="col">C</div>
+        <div class="col main-img">C</div>
       </div>
     </div>
   </body>
