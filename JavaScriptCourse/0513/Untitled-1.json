@@ -1,0 +1,26 @@
+{
+  "title": "todo-list",
+  "items": [
+    {
+      "id": 1,
+      "title": "我的待辦",
+      "priority": "high",
+      "complete": true,
+      "due-date": "2026-05-13"
+    },
+    {
+      "id": 2,
+      "title": "買菜",
+      "priority": "low",
+      "complete": false,
+      "due-date": "2026-05-30"
+    },
+    {
+      "id": 3,
+      "title": "健身",
+      "priority": "medium",
+      "complete": false,
+      "due-date": null
+    }
+  ]
+}

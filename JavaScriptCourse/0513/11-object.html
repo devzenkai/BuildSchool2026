@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const student = {
+        id: 1,
+        name: "Amy",
+        score: 82,
+        isActive: true,
+      };
+      console.log(student.name); //點記法
+      console.log(student["score"]); //括號記法
+
+      student.gender = "female";
+      student.name = "Candy";
+
+      delete student.score;
+      console.dir(student);
+
+      const cart = {
+        items: [100, 200, 300],
+        getTotal() {
+          return this.items.reduce((total, price) => total + price, 0);
+        },
+      };
+      console.dir(cart);
+      console.log(cart.getTotal());
+    </script>
+  </body>
+</html>
