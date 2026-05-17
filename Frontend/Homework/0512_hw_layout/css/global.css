@@ -1,0 +1,37 @@
+:root {
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-20: 80px;
+    --space-24: 96px;
+    --space-28: 112px;
+    --container-max: 1120px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+img {
+    object-fit: cover;
+    display: block;
+}
+
+.container {
+    width: min(100% - 32px, var(--container-max));
+    margin: 0 auto;
+}
