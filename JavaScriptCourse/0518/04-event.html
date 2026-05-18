@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" class="my-input" />
+    <button class="my-button" onclick="clickHandler()">按我</button>
+    <button class="remove-button">移除事件監聽</button>
+
+    <script>
+      const myInput = document.querySelector(".my-input");
+      const myButton = document.querySelector(".my-button");
+      const removeButton = document.querySelector(".remove-button");
+
+      function clickHandler() {
+        console.log("clickHandler！！！！！");
+      }
+      function clickHandler2() {
+        console.log("clickHandler2！！！！！");
+      }
+
+      //   myInput.addEventListener("keydown", function(e){
+      //       console.dir(e);
+      //   });
+      //   myInput.addEventListener("keyup", function(e){
+      //       console.dir(e);
+      //   });
+      //   myInput.addEventListener("input", function(e){
+      //       console.dir(e);
+      //   });
+
+      // myButton.addEventListener("click", function(e){
+      //     console.dir(e);
+      // });
+
+      //   myButton.addEventListener("click", clickHandler);
+      //   myButton.addEventListener("click", clickHandler2);
+
+      //   removeButton.addEventListener("click", function(e){
+      //       myButton.removeEventListener("click", clickHandler)
+      //   });
+
+      //   myButton.onclick = clickHandler;
+
+
+    </script>
+  </body>
+</html>
