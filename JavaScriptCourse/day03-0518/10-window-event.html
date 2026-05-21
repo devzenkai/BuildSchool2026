@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="https://picsum.photos/300/200/?random=10" />
+    <img src="https://picsum.photos/300/200/?random=20" />
+    <img src="https://picsum.photos/300/200/?random=30" />
+    <img src="https://picsum.photos/300/200/?random=40" />
+    <img src="https://picsum.photos/300/200/?random=50" />
+    <img src="https://picsum.photos/300/200/?random=60" />
+    <img src="https://picsum.photos/300/200/?random=70" />
+    <script>
+      window.addEventListener("load", function (e) {
+        console.log("load");
+        console.log("e,cancelable");
+      });
+      window.addEventListener("DOMContentLoaded", function (e) {
+        console.log("DOMContentLoaded");
+        console.log(e.cancelable);
+      });
+      window.addEventListener("resize", function (e) {
+        console.log(e.target.innerWidth);
+      });
+      window.addEventListener("scroll", function (e) {
+        console.log(e);
+      });
+    </script>
+  </body>
+</html>

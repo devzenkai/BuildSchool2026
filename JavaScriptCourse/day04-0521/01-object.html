@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const student = {
+        name: "Bill",
+        score: 92,
+        isPassed: true,
+      };
+
+      const studentKeys = Object.keys(student);
+      console.log(studentKeys);
+
+      //   studentKeys.forEach(function (item) {
+      //     console.log(`key: ${item}, value: ${student[item]}`);
+      studentKeys.forEach(function (key) {
+        console.log(`key: ${key}, value: ${student[key]}`);
+      });
+
+      const studentValues = Object.values(student);
+      console.log(studentValues);
+      studentValues.forEach((item) => {
+        console.log(`value: ${item}`);
+      });
+
+      const student2 = {
+        name: "Bill",
+        score: 92,
+        isPassed: true,
+      };
+
+      console.log(student === student2); //false
+      console.log(Object.is(student, student2)); //false
+
+      const student3 = student;
+      console.log(Object.is(student3, student)); //true
+      console.log(student3 === student); //true
+      student3.name = "Andy";
+      console.log(student3);
+      console.log(student);
+
+      //Object.entries
+
+      const studentEntries = Object.entries(student);
+      console.log(studentEntries);
+
+      studentEntries.forEach((entries) => {
+        // console.log(entry);
+        console.log(`key: ${entries[0]}, value: ${entries[1]}`);
+      });
+    </script>
+  </body>
+</html>

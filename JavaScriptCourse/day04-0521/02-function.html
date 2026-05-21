@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="btn">點我</button>
+    <button class="arrow-fn-btn">點我</button>
+    <script>
+      //   //原本function的宣告
+      //   function fn(name) {
+      //     console.log(`Your Name: ${name}`);
+      //   }
+      //   fn("Andy");
+
+      //   //匿名函式(匿名函式放到變數內)
+      //   const fn2 = function (name) {
+      //     console.log(`fun2...Your Name: ${name}`);
+      //   };
+      //   fn2("Andy");
+
+      //   //Arrow Function 箭頭函式(匿名函式演變而來)
+      //   const arrowFn = (name) => {
+      //     console.log(`arrowFn...Your Name: ${name}`);
+      //   };
+      //   arrowFn("Andy");
+
+      //   //只有一行的時可以省略
+      //   const arrowFn2 = (name) => console.log(`arrowFn2...Your Name: ${name}`);
+      //   arrowFn2("Andy");
+
+      //   const add = (a, b) => a + b;
+      //   console.log(add(8, 9));
+
+      //   function greetingFn() {
+      //     console.log(this);
+      //     console.log(`Hi, my name is ${this.name}`);
+      //   }
+      //   greetingFn();
+
+      //   const person = {
+      //     name: "Andy",
+      //     greeting: greetingFn,
+      //   };
+      //   const person2 = {
+      //     name: "Bill",
+      //     greeting: greetingFn,
+      //   };
+
+      //   person.greeting();
+      //   person2.greeting();
+
+      //   //arrow function 的 this
+      //   const greetingArrowFn = () => {
+      //     console.log(this);
+      //     console.log(`Hi! My name is ${this.name}`);
+      //   }
+
+      //   const person3 = {
+      //     name: "Andy3",
+      //     greeting: greetingArrowFn
+      //   }
+
+      //   person3.greeting();
+
+      document.querySelector(".btn").addEventListener("click", function (e) {
+        console.log(e.target.textContent);
+        console.log(this);
+        console.log(this.textContent);
+      });
+      document.querySelector(".arrow-fn-btn").addEventListener("click", (e) => {
+        console.log(e.target.textContent);
+        console.log(this);
+        console.log(this.textContent);
+      });
+    </script>
+  </body>
+</html>

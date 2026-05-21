@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn">點我</button>
+    </div>
+    <p id="info"></p>
+
+    <script>
+        const container = document.querySelector(".container");
+        const btn = document.querySelector(".btn");
+        const info = document.querySelector("#info");
+
+        function clickHandler(e) {
+          console.dir(e);
+
+          info.innerHTML += `點擊了 ${e.currentTarget.tagName}! <br>`;
+          // info.innerHTML += `點擊了 ${e.target.tagName}! <br>`;
+        }
+
+        btn.addEventListener("click", clickHandler);
+      //container.addEventListener("click", clickHandler);
+        container.addEventListener("click", function(e){
+          console.log("按了！")
+          //停止事件傳遞
+          e.stopPropagation();
+        });
+
+        document.body.addEventListener("click", clickHandler);
+    </script>
+  </body>
+</html>

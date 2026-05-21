@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="panel">
+      <button class="save">儲存</button>
+    </section>
+
+    <script>
+      const panel = document.querySelector(".panel");
+      const saveButton = document.querySelector(".save");
+
+      panel.addEventListener(
+        "click",
+        function () {
+          console.log("點了 panel！");
+        },
+        { capture: true },
+      );
+
+      saveButton.addEventListener("click", function () {
+        console.log("點了 save！");
+        true;
+      });
+
+      document.body.addEventListener(
+        "click",
+        function () {
+          console.log("點了 body");
+        },
+        true,
+      );
+    </script>
+  </body>
+</html>

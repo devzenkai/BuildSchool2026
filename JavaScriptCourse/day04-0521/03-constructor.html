@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const p = {
+        name: "Andy",
+        age: 18,
+      };
+      console.log(p);
+
+      function createPerson(name, age) {
+        const obj = {
+          name: name,
+          age: age,
+
+          introduceSelf: function () {
+            console.log(
+              `Hi... my name is ${this.name}, I'm ${this.age} years old.`,
+            );
+          },
+        };
+        return obj;
+      }
+
+      const p2 = createPerson("Bill", 20);
+      p2.introduceSelf();
+
+      const p3 = createPerson("Dann", 23);
+      p3.introduceSelf();
+
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+
+        this.introduceSelf = function () {
+          console.log(
+            `Hi... my name is ${this.name}, I'm ${this.age} years old.`,
+          );
+        };
+      }
+
+      const p4 = new Person("Weber", 18);
+      p4.introduceSelf();
+    </script>
+  </body>
+</html>

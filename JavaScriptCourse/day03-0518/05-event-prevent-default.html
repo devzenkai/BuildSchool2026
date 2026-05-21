@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="https://google.com">Google</a>
+    <input type="checkbox" id="checkbox1" />
+    <script>
+      document.querySelector("a").addEventListener("click", function (e) {
+        console.log("按下了按鈕！！！");
+
+        e.preventDefault();
+      });
+
+      document
+        .querySelector("#checkbox1")
+        .addEventListener("click", function (e) {
+          console.log(e.cancelable);
+          e.preventDefault();
+        });
+    </script>
+  </body>
+</html>

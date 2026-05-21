@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const todoArr = ["C#預習", "切版作業", "JS作業"];
+      console.log("原始的陣列內容");
+      console.log(todoArr);
+
+      todoArr.push("完成JS猜數字遊戲");
+      console.log(todoArr);
+
+      const popItem = todoArr.pop();
+      console.log("pop後的Arr: ");
+      console.log(todoArr);
+      console.log(`popItem: ${popItem}`);
+
+      console.log("---");
+
+      todoArr.unshift("先修課預習");
+      console.log("unshift後的Arr:");
+      console.log(todoArr);
+
+      const shiftItem = todoArr.shift();
+      console.log("shift後的todoArr");
+      console.log(todoArr);
+      console.log(`shiftItem: ${shiftItem}`);
+
+      console.log("---");
+
+      const spliceItems = todoArr.splice(1, 2);
+      console.log(todoArr);
+      console.log("spliceItems: ");
+      console.log(spliceItems);
+
+      console.log("---");
+
+      console.log("splice 取代前的Arr");
+      console.log(todoArr);
+
+      todoArr.splice(0, 1, "replace item");
+      console.log("splice 取代後的 Arr");
+      console.log(todoArr);
+    </script>
+  </body>
+</html>

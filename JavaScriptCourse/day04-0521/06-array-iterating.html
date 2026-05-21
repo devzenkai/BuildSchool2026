@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const courseArr = ["C#", "HTML/CSS", "SQL", "ASP.NET Core MVC"];
+
+      console.log("use for loop...");
+      for (let i = 0; i < courseArr.length; i++) {
+        console.log(`i: ${i}, item: ${courseArr[i]}`);
+      }
+
+      console.log("use for of");
+      for (let item of courseArr) {
+        console.log(`item is ${item}`);
+      }
+
+      console.log("use for in...");
+      for (const key in courseArr) {
+        console.log(`key: ${key}, item: ${courseArr[key]}`);
+      }
+
+      console.log("use Array.prototype.forEach...");
+      function arrCallbackFn(item, idx, arr) {
+        console.log(`idx: ${idx}, item: ${item}`);
+        console.log(arr);
+      }
+
+      const res = courseArr.forEach(arrCallbackFn);
+      console.log(res);
+    </script>
+  </body>
+</html>

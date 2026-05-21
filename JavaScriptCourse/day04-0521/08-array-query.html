@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const numArr = [20, 12, 3, 1, 18, 3];
+      console.log("numArr: ");
+      console.log(numArr);
+
+      console.log("找第一個數字3所在索引");
+      const res1 = numArr.indexOf(3);
+      console.log(res1);
+      console.log("找第一個數字100所在的索引");
+      const res2 = numArr.indexOf(100);
+      console.log(res2);
+      console.log("---");
+
+      //Array.prototype.lastIndexOf()
+      console.log("找到最後一個數字3所在的索引");
+      const res3 = numArr.lastIndexOf(3);
+      console.log(res3);
+      console.log("---");
+
+      //Array.prototype.find()
+      console.log("找到第一個奇數");
+      //const firstOddNum = numArr.find((num) => num % 2 != 0);
+      const firstOddNum = numArr.find(function (num) {
+        return num % 2 != 0;
+      });
+      console.log(firstOddNum);
+
+      const res4 = numArr.find((num) => num > 20);
+      console.log(res4); //undefined
+
+      //Array.prototype.findLast()
+      console.log("找到最後一個偶數:");
+      const lastEvenNum = numArr.findLast((num) => num % 2 == 0);
+      console.log(lastEvenNum);
+      console.log("找到最後一個大於30的數字(找不到)"); //找不到
+      const lastGreaterThan30 = numArr.findLast((num) => num > 30);
+      console.log(lastGreaterThan30);
+
+      console.log("---");
+
+      //Array.prototype.filter()
+      console.log("找到所有小於10的數字");
+      const lessThan10Nums = numArr.filter((num) => num < 10);
+      console.log(lessThan10Nums);
+      console.log("找到所有大於30的數字");
+      const greaterThan30Nums = numArr.filter((num) => num > 30);
+      console.log(greaterThan30Nums);
+
+      console.log("---");
+
+      //Array.prototype.includes()
+      let target = 20;
+      console.log(`numArr內是否有指定的項目：${target}`);
+      const result = numArr.includes(target);
+
+      if (result) {
+        console.log(`numArr內有 ${target}`);
+      } else {
+        console.log(`numArr內沒有 ${target}`);
+      }
+
+      console.log("---");
+
+      const people = [
+        {
+          name: "Bill",
+          age: 47,
+        },
+        {
+          name: "John",
+          age: 37,
+        },
+        {
+          name: "Tom",
+          age: 48,
+        },
+        {
+          name: "David",
+          age: 36,
+        },
+        {
+          name: "Bill",
+          age: 35,
+        },
+      ];
+
+      console.log("people 原本的內容為:");
+      console.log(people);
+
+      console.log("找出大於40歲的人：");
+      const res5 = people.filter((person) => person.age > 40);
+      console.log(res5);
+
+      //Array.prototype.every() C# enumerable.All
+      console.log("是否所有人年紀都小於20");
+      console.log(people.every((p) => p.age < 20));
+      console.log("是否所有人年紀為30以上, 50以下(大於等於30, 小於50)");
+      console.log(people.every((p) => p.age >= 30 && p.age < 50));
+
+      //Array.prototype.some() C# enumerable.Any
+      console.log("是否有任何一個年紀大於40的人？");
+      console.log(people.some((p) => p.age > 40));
+      console.log("是否有任何一個名字叫做 Andy 的人？");
+      console.log(people.some((p) => p.name === "Andy"));
+    </script>
+  </body>
+</html>
