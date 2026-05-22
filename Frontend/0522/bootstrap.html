@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UrbanCart | 質感生活選物</title>
+    <!-- bootstrap@5.3.8 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- bootstrap-icons 1.13.1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+      integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- global.css -->
+    <link rel="stylesheet" href="./css/global.css" />
+    <!-- header.css -->
+    <link rel="stylesheet" href="./css/header.css" />
+    <style>
+      footer {
+        background-color: #111827;
+        color: rgba(255, 255, 255, 0.75);
+      }
+      footer a {
+        color: rgba(255, 255, 255, 0.75);
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- top bar -->
+    <div class="bg-black text-white small py-2 text-center">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-md-between"
+      >
+        <p class="mb-1 mb-md-0">春季新品上市｜滿 NT$1,200 免運</p>
+        <p class="mb-0">
+          <i class="bi bi-truck me-1"></i> 24 小時快速出貨｜
+          <i class="bi bi-shield-check me-1"></i> 七天鑑賞期
+        </p>
+      </div>
+    </div>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container py-2">
+        <a class="navbar-brand fw-bold fs-3" href="#"
+          >Urban<span class="text-brand">Cart</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">商品分類</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">熱銷商品</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">限時優惠</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">顧客評價</a>
+            </li>
+          </ul>
+          <!-- navbar button group -->
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-light rounded-circle">
+              <i class="bi bi-search"></i>
+            </button>
+            <button class="btn btn-light rounded-circle">
+              <i class="bi bi-person"></i>
+            </button>
+            <button
+              type="button"
+              class="btn btn-brand rounded-pill position-relative"
+            >
+              <i class="bi bi-bag"></i> 購物車
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                99+
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <footer class="pt-5 pb-4">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a href="">UrbanCart</a>
+            <p>為日常生活挑選真正實用、好看、值得入手的商品。</p>
+            <div class="d-flex">
+              <a href=""><i class="bi bi-instagram"></i></a
+              ><a href=""><i class="bi bi-facebook"></i></a
+              ><a href=""><i class="bi bi-line"></i></a>
+            </div>
+          </div>
+          <div class="col">
+            <h3>購物資訊</h3>
+            <ul>
+              <li><a href="">付款方式</a></li>
+              <li><a href="">配送說明</a></li>
+              <li><a href="">退換貨政策</a></li>
+              <li><a href="">常見問題</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>關於我們</h3>
+            <ul>
+              <li><a href="">品牌故事</a></li>
+              <li><a href="">合作洽詢</a></li>
+              <li><a href="">門市資訊</a></li>
+              <li><a href="">聯絡客服</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h3>客服時間</h3>
+            <p>週一至週五 10:00 - 18:00</p>
+            <p>Email：service@urbancart.example</p>
+            <p>電話：02-1234-5678</p>
+          </div>
+        </div>
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between gap-2 small"
+        >
+          <div>© 2026 UrbanCart. All rights reserved.</div>
+          <div>Privacy Policy · Terms of Service</div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
