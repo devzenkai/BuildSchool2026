@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("十二生肖排序(自訂排序)");
+        const zoo = ["牛", "鼠", "虎", "兔", "豬", "蛇", "馬", "龍", "狗", "猴", "羊", "雞"]
+
+        const order = ["鼠", "牛", "虎", "兔", "龍", "蛇", "馬", "羊", "猴", "雞", "狗", "豬"]
+
+        zoo.sort((a, b) => {
+            return order.indexOf(a) - order.indexOf(b);
+        });
+
+        console.log(zoo)
+    </script>
+</body>
+
+</html>
