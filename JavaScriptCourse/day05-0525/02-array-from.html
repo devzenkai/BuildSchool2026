@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <script>
+      const people = [
+        {
+          name: "Bill",
+          age: 47,
+        },
+        {
+          name: "John",
+          age: 37,
+        },
+        {
+          name: "Tom",
+          age: 48,
+        },
+        {
+          name: "David",
+          age: 36,
+        },
+        {
+          name: "Bill",
+          age: 35,
+        },
+      ];
+
+      console.log("原本的內容：");
+      console.log(people);
+
+      const copyArr = Array.from(people);
+      //   console.log("淺拷貝");
+      //   console.log(copyArr);
+
+      copyArr[0].age = 20;
+
+      console.log(people[0]);
+      console.log(Object.is(people, copyArr)); //false
+      console.log(Object.is(people[0], copyArr[0])); //true
+
+      const copyArrByMapFn = Array.from(people, (p) => p.name);
+      console.log(copyArrByMapFn);
+
+      const distinctNameFromArr = new Set(copyArrByMapFn);
+      console.log("distinctNameFromArr的內容(Set)");
+      console.log(distinctNameFromArr);
+      const arrFromSet = Array.from(distinctNameFromArr);
+      console.log("arrFromSet的內容");
+      console.log(arrFromSet);
+
+      const nodeList = document.querySelectorAll("p");
+      console.log(nodeList);
+
+      const arrFromNodeList = Array.from(nodeList, (item, idx) => {
+        return {
+          seq: idx + 1,
+          text: item.textContent,
+        };
+      });
+
+      console.log(arrFromNodeList);
+
+      const convertArr = [];
+      nodeList.forEach((item, idx) => {
+        const temp = {
+          no: idx + 1,
+          text: item.textContent,
+        };
+        convertArr.push(temp);
+      });
+      console.log(convertArr);
+    </script>
+  </body>
+</html>

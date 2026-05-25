@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //function 呼叫使用展開語法
+      function sum(x, y, z) {
+        console.log(x, y, z);
+        return x + y + z;
+      }
+      console.log(sum(1, 2, 3));
+      const numArr = [6, 5, 4, 3, 2, 1];
+      console.log(sum(...numArr));
+
+      //使用[]建立新陣列 (淺拷貝)
+      const newArr = [...numArr];
+      //const newArr = [1, 2, 3, ...numArr, 10, 20, 30, ...numArr];
+      console.log(newArr);
+
+      //使用{}建立新物件
+      const person = {
+        name: "Andy",
+        age: 18,
+      };
+
+      //   const obj = {
+      //     id: "a001",
+      //     name: person.name,
+      //     age: person.age,
+      //   };
+
+      const obj = {
+        id: "a001",
+        ...person,
+      };
+      console.log(obj);
+
+      console.log("---");
+
+      //rest syntax
+      //   function mySum(x, y, z, ...thisArg) {
+      //     console.log(x, y, z);
+      //     console.log(thisArg);
+      //   }
+      const res1 = mySum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+      console.log(res1);
+
+      const res2 = mySum(1, 2);
+      console.log(res2);
+
+      function mySum(...thisArg) {
+        console.log(thisArg);
+        return thisArg.reduce((acc, curr) => acc + curr, 0);
+      }
+
+      const res3 = mySum(1, 2, ...numArr);
+      console.log(res3);
+    </script>
+  </body>
+</html>

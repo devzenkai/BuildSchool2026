@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const numArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const initVal = 0;
+      const sumWithInitVal = numArr.reduce((acc, curr, idx) => {
+        console.log(`idx: ${idx}, acc: ${acc}, curr: ${curr}`);
+        return acc + curr;
+      }, initVal);
+      console.log(sumWithInitVal);
+
+      const sumWithoutInitVal = numArr.reduce((acc, curr, idx) => {
+        console.log(`idx: ${idx}, acc: ${acc}, curr: ${curr}`);
+        return acc + curr;
+      });
+      console.log(sumWithoutInitVal);
+
+      //計算陣列內的總和
+      const sumResult = numArr.reduce((acc, curr, idx) => acc + curr, 0);
+      console.log(sumResult);
+
+      //攤平陣列 [[1,3],[5,7]] 二維陣列 -> 一維陣列 [1,3,5,7]
+      console.log("二維陣列");
+      const my2DArr = [
+        [1, 3],
+        [5, 7],
+      ];
+      const myFlat2DArrResult = my2DArr.reduce(
+        (acc, curr) => acc.concat(curr),
+        [],
+      );
+      console.log(myFlat2DArrResult);
+
+      console.log("---");
+
+      const array1 = [1, 3, 5, 7, 9];
+      const array2 = [1, 2, 3, 4, 5];
+      //聯集
+      function myUnion(arr1, arr2) {
+        return arr2.reduce((acc, curr) => {
+          if (!acc.includes(curr)) {
+            return acc.concat(curr);
+          }
+          return acc;
+        }, arr1);
+      }
+      const unionResult = myUnion(array1, array2);
+      console.log(unionResult);
+
+      console.log("---");
+
+      //交集
+      console.log("array1 intersect array2");
+      function myIntersect(arr1, arr2) {
+        return arr2.reduce((acc, curr) => {
+          if (arr1.includes(curr)) {
+            return acc.concat(curr);
+          }
+          return acc;
+        }, []);
+      }
+      const intersectResult = myIntersect(array1, array2);
+      console.log(intersectResult);
+
+      console.log("---");
+
+      console.log("array1 except array2");
+      function myExcept(arr1, arr2) {
+        return arr1.reduce((acc, curr) => {
+          const idx = arr2.indexOf(curr);
+          if (idx === -1) {
+            return acc.concat(curr);
+          }
+          return acc;
+        }, []);
+      }
+      const arr1ExceptArr2Result = myExcept(array1, array2);
+      console.log(arr1ExceptArr2Result);
+      console.log("array 2 except array1");
+      const arr2ExceptArr1Result = myExcept(array2, array1);
+      console.log(arr2ExceptArr1Result);
+    </script>
+  </body>
+</html>

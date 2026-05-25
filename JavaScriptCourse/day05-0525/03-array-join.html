@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const people = [
+        {
+          name: "Bill",
+          age: 47,
+        },
+        {
+          name: "John",
+          age: 37,
+        },
+        {
+          name: "Tom",
+          age: 48,
+        },
+        {
+          name: "David",
+          age: 36,
+        },
+        {
+          name: "Bill",
+          age: 35,
+        },
+      ];
+
+      console.log(`取得年紀超過 40 歲的人名, 並將結果用" & "分隔`);
+      const ageMoreThan40 = people.filter((p) => p.age > 40);
+      const numArr = ageMoreThan40.map((p) => p.name);
+      console.log(numArr);
+      const result = numArr.join(" & ");
+      console.log(result);
+
+      console.log(
+        people
+          .filter((p) => p.age > 40)
+          .map((p) => p.name)
+          .join("\n"),
+      );
+    </script>
+  </body>
+</html>

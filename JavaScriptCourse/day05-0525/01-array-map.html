@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const people = [
+        {
+          name: "Bill",
+          age: 47,
+        },
+        {
+          name: "John",
+          age: 37,
+        },
+        {
+          name: "Tom",
+          age: 48,
+        },
+        {
+          name: "David",
+          age: 36,
+        },
+        {
+          name: "Bill",
+          age: 35,
+        },
+      ];
+
+      console.log(people);
+
+      //Array.prototype.map() C# Enumerable.Select
+      console.log("從 people 內取得所有人的名字：");
+      const nameArr = people.map((p) => p.name);
+      console.log(nameArr);
+
+      console.log("從 people 內取得原本的內容後新增 id, id 要從 1 開始");
+      //   const peopleWithIdArr = people.map((p, idx) => {
+      //     const tempPerson = {
+      //       id: idx + 1,
+      //       name: p.name,
+      //       age: p.age,
+      //     };
+      //     return tempPerson;
+      //   });
+      const peopleWithIdArr = people.map(
+        (p, idx) => new Person(idx + 1, p.name, p.age),
+      );
+
+      console.log(peopleWithIdArr);
+
+      function Person(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+      }
+    </script>
+  </body>
+</html>
