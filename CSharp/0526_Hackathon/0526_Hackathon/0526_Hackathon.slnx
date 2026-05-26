@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="ContentReplace/ContentReplace.csproj" />
+  <Project Path="GuessNumber/GuessNumber.csproj" />
   <Project Path="StringCharCount/StringCharCount.csproj" />
   <Project Path="TemperatureConversion/TemperatureConversion.csproj" />
 </Solution>
