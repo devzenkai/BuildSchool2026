@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const url =
+        "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json";
+
+      const request = new XMLHttpRequest();
+      request.open("GET", url);
+      // request.responseType = "json";
+
+      request.send();
+
+      request.addEventListener("load", () => {
+        // console.log(request);
+
+        if (request.status >= 200 && request.status < 300) {
+          console.log("request success");
+          // console.log(request.response);
+          const result = JSON.parse(request.response);
+          console.log(result);
+
+          const snaArr = result.map((item) => item.sna);
+          console.log(snaArr);
+
+          console.log(result.filter((item) => item.sarea === "大安區"));
+        } else {
+          console.warn(`request failed: 狀態碼：${request.status}`);
+        }
+      });
+      console.log(request);
+      // 如果有回應，就是 load, 而不是 error
+      request.addEventListener("error", (err) => {
+        console.log(err);
+      });
+    </script>
+  </body>
+</html>

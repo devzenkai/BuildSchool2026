@@ -3,7 +3,7 @@ namespace GuessNumber
 {
     public partial class Form1 : Form
     {
-        private string answer = "";
+        private string answer = ""; //建立一個 answer 字串
         public Form1()
         {
             InitializeComponent();
@@ -24,14 +24,15 @@ namespace GuessNumber
             reveal.Enabled = true;
             checkResult.Enabled = true;
             reset.Enabled = true;
-            Random rnd = new Random();
-            var digits = Enumerable.Range(0, 10).ToList();
+
+            Random rnd = new Random(); // 建立亂數物件
+            var digits = Enumerable.Range(0, 10).ToList(); // 建立 0~9 的數字列表 digits = [0,1,2,3,4,5,6,7,8,9]
             answer = "";
 
             for (int i = 0; i < 4; i++)
             {
-                int index = rnd.Next(digits.Count);
-                answer += digits[index].ToString();
+                int index = rnd.Next(digits.Count); // 從 digits 的範圍內，隨機挑一個index
+                answer += digits[index].ToString(); // 把選到的數字加入答案字串
                 digits.RemoveAt(index);
             }
         }
