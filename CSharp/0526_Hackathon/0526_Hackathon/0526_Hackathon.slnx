@@ -1,6 +1,8 @@
 <Solution>
   <Project Path="ContentReplace/ContentReplace.csproj" />
   <Project Path="GuessNumber/GuessNumber.csproj" />
+  <Project Path="LifePathNumber/LifePathNumber.csproj" Id="0b60e1b5-e52f-4459-926d-0dfc8ee7549f" />
+  <Project Path="ProgressiveTaxRate/ProgressiveTaxRate.csproj" Id="d9026794-a3ea-459f-bda2-c2c1fb47b6aa" />
   <Project Path="StringCharCount/StringCharCount.csproj" />
   <Project Path="TemperatureConversion/TemperatureConversion.csproj" />
 </Solution>
