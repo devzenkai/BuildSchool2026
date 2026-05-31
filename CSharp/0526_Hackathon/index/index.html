@@ -1,117 +1,135 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guess the Number</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <style></style>
-  </head>
-  <body>
-    <div class="container mt-2">
-      <div class="header d-flex gap-2">
-        <button id="startBtn" type="button" class="btn btn-light flex-fill">
-          開始
-        </button>
-        <button id="resetBtn" type="button" class="btn btn-light flex-fill">
-          放棄重來
-        </button>
-        <button id="revealBtn" type="button" class="btn btn-light flex-fill">
-          看答案
-        </button>
-      </div>
 
-      <div class="guess-history my-2"></div>
-      <template id="guess-history-template">
-        <div class="border rounded p-2 mb-2 d-flex justify-content-between">
-          <span class="result badge bg-danger"></span>
-          <span class="guess-number"></span>
-        </div>
-      </template>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Number</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <style></style>
+</head>
 
-      <div>
-        <div class="input-group">
-          <div class="input-group-text">猜答案</div>
-          <input id="guessInput" type="text" class="form-control" />
-          <button id="guessBtn" type="button" class="btn btn-light">
-            猜！
-          </button>
-        </div>
-      </div>
+<body>
+  <div class="container mt-2">
+    <div class="header d-flex gap-2">
+      <button id="startBtn" type="button" class="btn btn-light flex-fill">
+        開始
+      </button>
+      <button id="resetBtn" type="button" class="btn btn-light flex-fill">
+        重置
+      </button>
+      <button id="revealBtn" type="button" class="btn btn-light flex-fill">
+        看答案
+      </button>
     </div>
 
-    <script>
-      let answer = "";
-      let gameStarted = false;
+    <div class="guess-history my-2"></div>
+    <template id="guess-history-template">
+      <div class="border rounded p-2 mb-2 d-flex justify-content-between">
+        <span class="result badge bg-danger"></span>
+        <span class="guess-number"></span>
+      </div>
+    </template>
 
-      const startBtn = document.getElementById("startBtn");
-      const resetBtn = document.getElementById("resetBtn");
-      const revealBtn = document.getElementById("revealBtn");
-      const guessBtn = document.getElementById("guessBtn");
+    <div>
+      <div class="input-group">
+        <div class="input-group-text">猜答案</div>
+        <input id="guessInput" type="text" class="form-control" />
+        <button id="guessBtn" type="button" class="btn btn-light">
+          猜！
+        </button>
+      </div>
+    </div>
+  </div>
 
-      const guessHistory = document.querySelector(".guess-history");
+  <script>
+    let answer = "";
+    let gameStarted = false;
 
-      const guessInput = document.getElementById("guessInput");
+    const startBtn = document.getElementById("startBtn");
+    const resetBtn = document.getElementById("resetBtn");
+    const revealBtn = document.getElementById("revealBtn");
+    const guessBtn = document.getElementById("guessBtn");
 
-      function createAnswer() {
-        let numbers = [];
-        while (numbers.length < 4) {
-          let num = Math.floor(Math.random() * 10);
-          if (!numbers.includes(num)) {
-            numbers.push(num);
-          }
+    const guessHistory = document.querySelector(".guess-history");
+
+    const guessInput = document.getElementById("guessInput");
+
+    function createAnswer() {
+      let numbers = [];
+      while (numbers.length < 4) {
+        let num = Math.floor(Math.random() * 10);
+        if (!numbers.includes(num)) {
+          numbers.push(num);
         }
-        return numbers.join("");
+      }
+      return numbers.join("");
+    }
+
+    function setGameState(isPlaying) {
+      startBtn.disabled = isPlaying;
+      resetBtn.disabled = !isPlaying;
+      revealBtn.disabled = !isPlaying;
+      guessBtn.disabled = !isPlaying;
+      guessInput.disabled = !isPlaying;
+    }
+
+    setGameState(false);
+
+    startBtn.addEventListener("click", function () {
+      answer = createAnswer();
+      gameStarted = true;
+
+      setGameState(true);
+    });
+
+    resetBtn.addEventListener("click", function () {
+      answer = "";
+      gameStarted = false;
+      guessInput.value = "";
+      guessHistory.innerHTML = "";
+
+      setGameState(false);
+
+    });
+
+    revealBtn.addEventListener("click", function () {
+      alert(`The answer is ${answer}`);
+    });
+
+    guessBtn.addEventListener("click", function () {
+      let A = 0;
+      let B = 0;
+
+      let guess = guessInput.value;
+
+      for (let i = 0; i < 4; i++) {
+        if (guess[i] === answer[i]) {
+          A++;
+        } else if (answer.includes(guess[i])) {
+          B++;
+        }
       }
 
-      startBtn.addEventListener("click", function () {
-        answer = createAnswer();
-      });
+      //create new block
+      const template = document.getElementById("guess-history-template");
+      const clone = template.content.cloneNode(true);
 
-      resetBtn.addEventListener("click", function () {
-        answer = "";
-        guessHistory.innerHTML = "";
-      });
+      if (A === 4) {
+        clone.querySelector(".result").classList.replace("bg-danger", "bg-success");
+        alert("答對了！")
+      }
+      clone.querySelector(".result").textContent = `${A}A${B}B`;
+      clone.querySelector(".guess-number").textContent = guess;
+      document.querySelector(".guess-history").appendChild(clone);
+      guessInput.value = "";
+    });
 
-      revealBtn.addEventListener("click", function () {
-        alert(`The answer is ${answer}`);
-      });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
 
-      guessBtn.addEventListener("click", function () {
-        let A = 0;
-        let B = 0;
-
-        let guess = guessInput.value;
-
-        for (let i = 0; i < 4; i++) {
-          if (guess[i] === answer[i]) {
-            A++;
-          } else if (guess.includes(answer[i])) {
-            B++;
-          }
-          return `${A}A${B}B`
-        }
-
-        //create new block
-        const template = document.getElementById("guess-history-template");
-        const clone = template.content.cloneNode(true);
-
-        clone.querySelector(".result").textContent = `${A}A${B}B`;
-        clone.querySelector(".guess-number").textContent = guess;
-        document.querySelector(".guess-history").appendChild(clone);
-
-        guessInput.value = "";
-      });
-    </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
 </html>
