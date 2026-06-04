@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+      createChat({
+        webhookUrl:
+          "https://azdevn8n.buildschool.dev/webhook/91987cec-fde7-4dfc-8a78-1625f4381eec/chat",
+        webhookConfig: {
+          method: "POST",
+          headers: {},
+        },
+        target: "#n8n-chat",
+        mode: "window",
+        chatInputKey: "chatInput",
+        chatSessionKey: "sessionId",
+        loadPreviousSession: true,
+        metadata: {},
+        showWelcomeScreen: false,
+        defaultLanguage: "en",
+        initialMessages: [
+          "Hi there! 👋",
+          "我是好物市集的客服助理小好。",
+          "很高興為您服務。",
+        ],
+        i18n: {
+          en: {
+            title: "電商選物機器人",
+            subtitle: "We're here to help you 24/7.",
+            footer: "",
+            getStarted: "New Conversation",
+            inputPlaceholder: "Type your question..",
+          },
+        },
+        enableStreaming: false,
+      });
+    </script>
+  </body>
+</html>
