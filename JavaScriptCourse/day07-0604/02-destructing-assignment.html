@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [1, 2, 3, 4, 5];
+      // 解構賦值-array
+      // let a, b, rest
+      const [a, b, ...rest] = arr;
+      console.log(a);
+      console.log(b);
+      console.log(rest);
+      //   let a = "123"; // error
+
+      const person = {
+        name: "Andy",
+        age: 18,
+        gender: "male",
+        country: "Taiwan",
+      };
+
+      // 解構賦值-object
+      const { name, age, country, ...others } = person;
+      console.log(name);
+      console.log(age);
+      console.log(others);
+      console.log(country);
+    </script>
+  </body>
+</html>
