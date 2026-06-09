@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Vue</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <ul>
+        <template v-for="(person, idx) in people" :key="person.id">
+          <li>
+            index: {{idx}} id: {{person.id}} - {{person.name}} - {{person.age}}
+          </li>
+        </template>
+      </ul>
+      <template v-for="(person, idx) in moreThan20People">
+          <p>
+            index: {{idx}} id: {{person.id}} - {{person.name}} - {{person.age}}
+          </p>
+          <hr />
+      </template>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      const { createApp } = Vue;
+
+      const app = createApp({
+        data() {
+          return {
+            people: [
+              {
+                id: 1,
+                name: "p1",
+                age: 30,
+              },
+              {
+                id: 2,
+                name: "p2",
+                age: 18,
+              },
+              {
+                id: 3,
+                name: "p3",
+                age: 45,
+              },
+              {
+                id: 4,
+                name: "p4",
+                age: 20,
+              },
+              {
+                id: 5,
+                name: "p5",
+                age: 16,
+              },
+            ],
+          };
+        },
+        computed: {
+          moreThan20People() {
+            return this.people.filter((p) => p.age >= 20);
+          },
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>

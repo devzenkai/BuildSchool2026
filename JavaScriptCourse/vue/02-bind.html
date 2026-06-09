@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Vue</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="card" v-bind:data-id="cardId">ID: {{cardId}}</div>
+      <div class="card" :data-id="cardId">ID: {{cardId}}</div>
+      <!-- 這個沒有綁到 -->
+      <div class="card" data-id="cardId">ID: {{cardId}}</div>
+
+      <button :disabled="!isCLick">Button？{{isCLick}}</button>
+
+      <img :src="imgUrl" alt="">
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      const { createApp } = Vue;
+
+      const app = createApp({
+        data() {
+          return {
+            cardId: 1,
+            isCLick: true,
+            imgUrl: "https://picsum.photos/300/200/?random=10",
+          };
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>
